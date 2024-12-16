@@ -44,7 +44,7 @@ def beverages(request):
 @csrf_exempt
 def order(request):
     request.session.set_expiry(0)
-    if request.is_ajax():
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
         request.session['note'] = request.POST.get('note')
         request.session['order'] = request.POST.get('orders')
         orders = json.loads(request.session['order'])
