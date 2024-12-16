@@ -21,7 +21,7 @@ pyparsing==3.0.9          # Compatible with Python 3.9
 python-dateutil==2.8.2    # Compatible with Python 3.9
 pytz==2021.3              # Compatible with Python 3.9
 scikit-learn==0.24.2      # Stable for Python 3.9
-scipy==1.7.3gi              # Compatible with Python 3.9
+scipy==1.7.3              # Compatible with Python 3.9
 setuptools==57.5.0        # Latest compatible version for Python 3.9
 six==1.16.0
 sqlparse==0.4.2           # Compatible with Django 3.1
