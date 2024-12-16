@@ -1,32 +1,32 @@
-asgiref==3.8.1
+asgiref==3.3.4           # Compatible with Django 3.1
 contourpy==1.3.0
-Cython == 3.0.2
-cycler==0.12.1
-distlib==0.3.9
-dj-database-url==2.3.0
-Django==3.1
+Cython==0.29.32           # Updated version for compatibility with Python 3.9
+cycler==0.10.0            # Compatible with matplotlib
+distlib==0.3.5
+dj-database-url==2.0.0   # Stable version compatible with Python 3.9
+Django==3.1               # Latest stable version compatible with Python 3.9
 django-heroku==0.3.1
-filelock==3.16.1
-fonttools==4.53.1
-joblib==1.4.2
-kiwisolver==1.4.7
-matplotlib==3.9.2
-numpy==2.0.2
-packaging==24.1
-pandas==2.2.2
-pillow==10.4.0
-platformdirs==4.3.6
-psycopg2==2.9.10
-pyparsing==3.1.4
-python-dateutil==2.9.0.post0
-pytz==2024.2
-scikit-learn==1.5.2
-scipy==1.14.1
-setuptools==75.6.0
+filelock==3.0.12          # Stable version for Python 3.9
+fonttools==4.28.5         # Compatible with Python 3.9
+joblib==1.2.0             # Latest compatible version for Python 3.9
+kiwisolver==1.3.2         # Compatible with matplotlib 3.4.x
+matplotlib==3.4.3         # Stable version for Python 3.9
+numpy==1.21.6             # Compatible with Python 3.9
+packaging==21.3           # Stable version compatible with Python 3.9
+pandas==1.3.3             # Compatible with Python 3.9
+pillow==8.4.0             # Compatible with Python 3.9
+platformdirs==2.5.4       # Compatible with Python 3.9
+psycopg2==2.9.3           # Stable for PostgreSQL and Python 3.9
+pyparsing==3.0.9          # Compatible with Python 3.9
+python-dateutil==2.8.2    # Compatible with Python 3.9
+pytz==2021.3              # Compatible with Python 3.9
+scikit-learn==0.24.2      # Stable for Python 3.9
+scipy==1.7.3gi              # Compatible with Python 3.9
+setuptools==57.5.0        # Latest compatible version for Python 3.9
 six==1.16.0
-sqlparse==0.5.1
-threadpoolctl==3.5.0
-typing_extensions==4.12.2
-tzdata==2024.1
-virtualenv==20.28.0
-whitenoise==6.8.2
+sqlparse==0.4.2           # Compatible with Django 3.1
+threadpoolctl==3.0.0      # Compatible with scikit-learn and Python 3.9
+typing_extensions==3.10.0.2 # Compatible with Python 3.9
+tzdata==2021.3            # Compatible with Python 3.9
+virtualenv==20.4.7        # Stable version for Python 3.9
+whitenoise==5.3.0         # Compatible with Python 3.9
