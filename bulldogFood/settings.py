@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '-!+v5rx=ynan2c@h4ebzl(tyc9sj)y8bwavj#e!z#u2$q^u&l('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['bulldogfood.herokuapp.com']
 
