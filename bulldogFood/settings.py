@@ -125,7 +125,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
-STATIC_ROOT = Path.PurePath.joinpath(BASE_DIR, 'staticfiles')
+STATIC_ROOT = PurePath.joinpath(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
