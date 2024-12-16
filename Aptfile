@@ -3,3 +3,5 @@ build-essential
 libopenblas-dev
 liblapack-dev
 libatlas-base-dev
+liblapack-dev
+gfortran
