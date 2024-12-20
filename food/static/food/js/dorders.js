@@ -1,12 +1,12 @@
-var pcart = document.querySelector('#pcart');
-var ptotal = document.querySelector('#ptotal');
+var dcart = document.querySelector('#dcart');
+var dtotal = document.querySelector('#dtotal');
 
-function addPizza(pid) {
+function addBeverage(did) {
     // get pizza name
-    pizzaId = '#piz' + pid;
+    beverageId = '#bev' + did;
     
-    var name = document.querySelector(pizzaId).innerHTML;
-    var radio = 'pizza' + pid;
+    var name = document.querySelector(beverageId).innerHTML;
+    var radio = 'beverage' + did;
     var pri = document.getElementsByName(radio);
     var size, price;
     if (pri[0].checked) {
@@ -31,28 +31,26 @@ function addPizza(pid) {
     var cart = document.querySelector("#cart");
     cart.innerHTML = orders.length;
 
+    butto = '<div class = "del" onclick = "removeBeverage(' + cartSize + ')">x</div>';
     
-    butto = '<div class = "del" onclick="removePizza(' + cartSize + ')">x</div>';
-    ptotal.innerHTML = 'Total: ' + total + ' $';
-    pcart.innerHTML += '<li>' + name + ' ' + size + ': ' + price + ' $' + butto + '</li>';
+    dtotal.innerHTML = 'Total: ' + total + ' $';
+    dcart.innerHTML += '<li>' + name + ' ' + size + ': ' + price + ' $' + butto + ' </li>';
 }
 
-function pshoppingCart() {
+function dshoppingCart() {
     var orders = JSON.parse(localStorage.getItem('orders'));
     var total = localStorage.getItem('total');
     var cartSize = orders.length;
     
-    pcart.innerHTML = '';
+    dcart.innerHTML = '';
     for (let i = 0; i < cartSize; i++) {
-        butto = '<div class = "del" onclick="removePizza(' + i + ')">x</div>';
-        pcart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ': ' + orders[i][2] + ' $' + butto + '</li>';
+        butto = '<div class = "del" onclick = "removeBeverage(' + i + ')">x</div>';
+        dcart.innerHTML += '<li>' + orders[i][0] + ' ' + orders[i][1] + ': ' + orders[i][2] + '$' + butto + '</li>';
     }
-    ptotal.innerHTML = 'Total: ' + total + ' $';
+    dtotal.innerHTML = 'Total: ' + total + ' $';
 }
 
-pshoppingCart();
-
-function removePizza(n) {
+function removeBeverage(n) {
     var orders = JSON.parse(localStorage.getItem('orders'));
     var total = localStorage.getItem('total');
     total = Number(total) - Number(orders[n][2]);
@@ -63,5 +61,9 @@ function removePizza(n) {
 
     localStorage.setItem('orders', JSON.stringify(orders));
     localStorage.setItem('total', total);
-    pshoppingCart();
+    dshoppingCart();
 }
+
+
+
+dshoppingCart();

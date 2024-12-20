@@ -1,10 +1,11 @@
 {% extends 'food/base.html' %}
 
+{% load static %}
+
 {% block title %} Beverages {% endblock %}
 
 {% block content %}
 
-    
 
     <div class = "container-fluid">
         <div class="row">
@@ -12,25 +13,23 @@
                 <h2 class="title">Beverages</h2>
                 <div class = "row">
                     {% for beverage in beverages %}
-                    <div class = "col-md-4 p-4">
+                    <div class = "col-md-4 col-sm-6 p-4">
                         <img class="picture" src = "{{ beverage.dImage }}">
-                        <h4 class = "p-3">{{ beverage.name }} </h4>  
+                        <h4 class = "pt-3" id = "bev{{beverage.id}}">{{ beverage.name }} </h4>  
                         <div class = "form-check-inline">
                             <label class = "form-check-label">
-                                <input class="form-check-input" type = "radio" checked>
-                                {{ beverage.priceM}} $
-                            
+                                <input class="form-check-input" type = "radio" name = "beverage{{beverage.id}}" value = "{{beverage.priceM }}" checked>
+                                M: {{ beverage.priceM}} $  
                             </label>
                         </div>
-
                         <div class = "form-check-inline">
                             <label class = "form-check-label">
-                                <input class="form-check-input" type = "radio">
-                                {{ beverage.priceL}} $
+                                <input class="form-check-input" type = "radio" name = "beverage{{beverage.id}}" value = "{{beverage.priceL}}">
+                                L: {{ beverage.priceL}} $
                             </label>
                         </div>
                         <div>
-                            <button class="btn-info mt-3">Add to cart</button>
+                            <button class="btn-info mt-3" onclick="addBeverage('{{ beverage.id }}')">Add to cart</button>
                         </div>
                         
                     </div>
@@ -39,12 +38,15 @@
             </div>
 
             <div class="col-md-4 orders">
-                <h2 class = "text-center">Order list</h2>
-                <ul></ul>
-                <h4 class = "text-right">Total: 0 $</h4>
+                <div class = "bg-dark p-4 rounded text-light">
+                    <h2 class = "text-center">Order list</h2>
+                    <ul id = "dcart"></ul>
+                    <h4 class = "text-right" id = "dtotal">Total: 0 $</h4>
+                </div>
             </div>
         </div>
     </div>
-    
+    <script src ="{% static 'food/js/dorders.js' %}"></script>
+
     
 {% endblock %}

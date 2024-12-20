@@ -34,7 +34,7 @@ function addBurger(bid) {
     butto = '<div class = "del" onclick = "removeBurger(' + cartSize + ')">x</div>';
     
     btotal.innerHTML = 'Total: ' + total + ' $';
-    bcart.innerHTML += '<li>' + name + ' ' + size + ': ' + price + ' $' + butto + ' $</li>';
+    bcart.innerHTML += '<li>' + name + ' ' + size + ': ' + price + ' $' + butto + ' </li>';
 }
 
 function bshoppingCart() {
